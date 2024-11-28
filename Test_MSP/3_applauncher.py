@@ -18,7 +18,7 @@ simulation_app = app_launcher.app
 """Rest everything follows."""
 
 
-import omni.isaac.core.utils.prims as prim_utils
+import omni.isaac.core.utils.prims as prim_utils # type: ignore
 
 
 import omni.isaac.lab.sim as sim_utils
