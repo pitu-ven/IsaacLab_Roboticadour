@@ -1,3 +1,8 @@
+# Floating cube environment with custom action term for PD control
+#./isaaclab.sh -p source/standalone/tutorials/03_envs/create_cube_base_env.py --num_envs 32
+# Quadrupedal locomotion environment with a policy that interacts with the environment
+#./isaaclab.sh -p source/standalone/tutorials/03_envs/create_quadruped_base_env.py --num_envs 32
+
 """Launch Isaac Sim Simulator first."""
 import argparse
 from omni.isaac.lab.app import AppLauncher
@@ -102,7 +107,7 @@ def main():
     count = 0
     while simulation_app.is_running():
         with torch.inference_mode():
-            if count %300 == 0:
+            if count %3000 == 0:
                 count = 0
                 env.reset()
                 print("-" *80)
